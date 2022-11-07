@@ -12,7 +12,7 @@ import {
   import { InputRightElement } from "@chakra-ui/react"
   import {Box} from "@chakra-ui/react"
   import {Button} from "@chakra-ui/react"
-  import { AuthContext } from "../Context/AuthContextProvider";
+  import { AuthContext } from "../../Context/AuthContextProvider";
 import axios from "axios";
 
   export default function LoginForm() {
@@ -34,7 +34,7 @@ import axios from "axios";
       
     }
     const handleRegisterUser=()=>{
-       axios.get(`https://reqres.in/api/register/1`,{
+       axios.get(`https://reqres.in/api/register`,{
         email:input.email,
         password:input.password
       }).then((res)=>{

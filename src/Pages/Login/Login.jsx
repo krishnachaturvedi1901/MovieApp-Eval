@@ -1,7 +1,7 @@
 import React,{useContext}from "react";
 import { Navigate } from "react-router-dom";
 import {Box} from "@chakra-ui/react"
-import { AuthContext } from "../Context/AuthContextProvider";
+import { AuthContext } from "../../Context/AuthContextProvider";
 import LoginForm from "./LoginForm";
 
 const Login = () => {

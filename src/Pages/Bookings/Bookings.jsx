@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Bookings = () => {
   return (
-    <div>Bookings</div>
+    <h1>Bookings</h1>
   )
 }
 

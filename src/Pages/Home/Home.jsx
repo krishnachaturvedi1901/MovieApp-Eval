@@ -20,7 +20,7 @@ const Home = () => {
        <Text fontSize="2xl" my="15px"  >ALL MOVIES AVAILABLE</Text>
        { movieList.map((ele)=>{
           
-           return <HStack my="20px" opacity={0.8} borderRadius="5px" bg="#242B2E" justifyContent="space-between" w="80%" border="1px solid #cecece">
+           return <HStack key={ele.id} my="20px" opacity={0.8} borderRadius="5px" bg="#242B2E" justifyContent="space-between" w="80%" border="1px solid #cecece">
             <Image src={ele.poster_path} w="100px" h="80px" alt="movieImg"/>
             <Text fontSize='xl'>{ele.title}</Text>
             <Link to={`/movie/${ele.id}`}>

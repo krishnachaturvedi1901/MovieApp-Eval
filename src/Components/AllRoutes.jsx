@@ -1,9 +1,9 @@
 import React from "react";
 import {Routes,Route} from "react-router-dom"
-import Bookings from "../Pages/Bookings.jsx";
-import Home from "../Pages/Home.jsx";
-import Login from "../Pages/Login.jsx";
-import MovieDetail from "../Pages/MovieDetail.jsx";
+import Bookings from "../Pages/Bookings/Bookings";
+import Home from "../Pages/Home/Home";
+import Login from "../Pages/Login/Login";
+import MovieDetail from "../Pages/MovieDetails/MovieDetail";
 import PrivateRoute from "./PrivateRoute"
 
 const AllRoutes = () => {

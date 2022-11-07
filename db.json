@@ -127,6 +127,48 @@
       "movie_id": 2,
       "name": "Sam",
       "seat": "A2"
+    },
+    {
+      "movie_id": "10",
+      "name": "ddd",
+      "seat": "Front",
+      "id": 9
+    },
+    {
+      "movie_id": "7",
+      "name": "sss",
+      "seat": "Front",
+      "id": 10
+    },
+    {
+      "movie_id": "7",
+      "name": "sss",
+      "seat": "Front",
+      "id": 11
+    },
+    {
+      "movie_id": "5",
+      "name": "ddada",
+      "seat": "Front",
+      "id": 12
+    },
+    {
+      "movie_id": "1",
+      "name": "dsadasd",
+      "seat": "Front",
+      "id": 13
+    },
+    {
+      "movie_id": "4",
+      "name": "Dumsraj Bhai",
+      "seat": "Balcony",
+      "id": 14
+    },
+    {
+      "movie_id": "8",
+      "name": "Soprani Sharma",
+      "seat": "Back",
+      "id": 15
     }
   ]
 }
