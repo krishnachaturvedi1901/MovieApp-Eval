@@ -123,52 +123,28 @@
   ],
   "moviesBooked": [
     {
-      "id": 1,
-      "movie_id": 2,
-      "name": "Sam",
-      "seat": "A2"
-    },
-    {
-      "movie_id": "10",
-      "name": "ddd",
+      "movie_id": "3",
+      "title": "The Man From Toronto",
+      "poster_path": "https://image.tmdb.org/t/p/original/5TdKvZimLSJHPQW8t3ctlsusnmH.jpg",
+      "name": "Krishna",
       "seat": "Front",
-      "id": 9
-    },
-    {
-      "movie_id": "7",
-      "name": "sss",
-      "seat": "Front",
-      "id": 10
-    },
-    {
-      "movie_id": "7",
-      "name": "sss",
-      "seat": "Front",
-      "id": 11
-    },
-    {
-      "movie_id": "5",
-      "name": "ddada",
-      "seat": "Front",
-      "id": 12
+      "id": 16
     },
     {
       "movie_id": "1",
-      "name": "dsadasd",
-      "seat": "Front",
-      "id": 13
-    },
-    {
-      "movie_id": "4",
-      "name": "Dumsraj Bhai",
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "poster_path": "https://image.tmdb.org/t/p/original/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+      "name": "Krishna Chaturvedi",
       "seat": "Balcony",
-      "id": 14
+      "id": 17
     },
     {
       "movie_id": "8",
-      "name": "Soprani Sharma",
+      "title": "Fantastic Beasts: The Secrets of Dumbledore",
+      "poster_path": "https://image.tmdb.org/t/p/original/jrgifaYeUtTnaH7NF5Drkgjg2MB.jpg",
+      "name": "Sonal Sharma",
       "seat": "Back",
-      "id": 15
+      "id": 18
     }
   ]
 }

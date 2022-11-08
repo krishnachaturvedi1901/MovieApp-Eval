@@ -15,6 +15,7 @@ import { Box, Button,
         backdropFilter='blur(10px) hue-rotate(90deg)'
       />
     )
+    console.log("booked Movie data--->",bookedMovieData)
     
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [overlay, setOverlay] = React.useState(<OverlayOne />)
@@ -38,6 +39,7 @@ import { Box, Button,
             <ModalHeader>Booking Details</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
+              <Text size="36px">Name:{bookedMovieData.title}</Text>
               <Text size="36px">Name:{bookedMovieData.name}</Text>
               <Text size="20px">Seat:{bookedMovieData.seat}</Text>
             </ModalBody>

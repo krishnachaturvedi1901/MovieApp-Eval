@@ -41,6 +41,8 @@ const MovieDetail = () => {
   const handleBookMovie=({name,seat})=>{
     axios.post(`http://localhost:8080/moviesBooked`,{
       movie_id:movieId.id,
+      title:movieDetail.title,
+      poster_path:movieDetail.poster_path,
       name:name,
       seat:seat
     })
