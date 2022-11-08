@@ -123,12 +123,12 @@
   ],
   "moviesBooked": [
     {
-      "movie_id": "1",
-      "title": "Doctor Strange in the Multiverse of Madness",
-      "poster_path": "https://image.tmdb.org/t/p/original/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
-      "name": "Sonal Sharma",
-      "seat": "Balcony",
-      "id": 4
+      "movie_id": "4",
+      "title": "Minions: The Rise of Gru",
+      "poster_path": "https://image.tmdb.org/t/p/original/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+      "name": "Narendra Modi",
+      "seat": "Back",
+      "id": 5
     }
   ]
 }
