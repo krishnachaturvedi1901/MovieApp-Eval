@@ -1,11 +1,5 @@
-import {useContext}from "react";
-
-import {
-    FormControl,
-    FormLabel,
-    FormErrorMessage,
-    FormHelperText,
-  } from '@chakra-ui/react'
+  import {useContext, useState}from "react";
+  import {FormControl,FormLabel,FormErrorMessage,FormHelperText} from '@chakra-ui/react'
   import React from 'react'
   import { Input } from '@chakra-ui/react'
   import {InputGroup} from "@chakra-ui/react"
@@ -13,11 +7,12 @@ import {
   import {Box} from "@chakra-ui/react"
   import {Button} from "@chakra-ui/react"
   import { AuthContext } from "../../Context/AuthContextProvider";
-import axios from "axios";
+  import axios from "axios";
+  import { useToast } from '@chakra-ui/react'
 
+  
   export default function LoginForm() {
     const {toggleAuth}=useContext(AuthContext)
-
     const [input, setInput] = React.useState(
       {
         email:"",
@@ -25,24 +20,33 @@ import axios from "axios";
       })
       console.log(input)
     const [show, setShow] = React.useState(false)
+    const toast = useToast()
 
     const handleClick = () => setShow(!show)
     
     const handleInputChange = (e) => {
      const {name,value}=e.target
-      name=="email"?setInput({...input,[name]:value}):setInput({...input,[name]:value})
+    setInput({...input,[name]:value})
       
     }
     const handleRegisterUser=()=>{
-       axios.get(`https://reqres.in/api/register`,{
+       axios.post(`https://reqres.in/api/login`,{
         email:input.email,
         password:input.password
       }).then((res)=>{
-        console.log(res)
+        console.log("Response from reqres---->",res)
         toggleAuth()
 
       }).catch((error)=>{
-        console.log(error)
+        console.log("eroor------>",error)
+        toast({
+          title: 'Invalid credentials',
+          description: "Use valid email-id or password (email-eve.holt@reqres.in  pass-cityslicka).",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        })
+        setInput({...input,email:"",password:""})
       })
     }
   

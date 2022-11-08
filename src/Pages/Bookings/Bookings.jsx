@@ -1,8 +1,8 @@
-import { Button, HStack, VStack , Text, Box,  useToast } from '@chakra-ui/react'
+import { Button, HStack, VStack , Text, Box,  useToast, Skeleton, Stack } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { Image } from '@chakra-ui/react'
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import DeleteModal from './DeleteModal'
 
 const Bookings = () => {
@@ -11,7 +11,7 @@ const Bookings = () => {
   const [confirmDelete,setConfirmDelete]=useState(false)
   const [isError,setIsError]=useState(false)
   const toast = useToast()
-
+  const navigate=useNavigate()
 
   useEffect(()=>{
     setIsLoading(true)
@@ -49,6 +49,28 @@ const Bookings = () => {
     })
   }
 
+if(isLoading){
+  return    <Stack>  
+       <Skeleton height='50px' />
+       <Skeleton height='50px' />
+       <Skeleton height='50px' />
+       <Skeleton height='50px' />
+       <Skeleton height='50px' />
+
+    </Stack>
+
+
+}
+
+  
+ if(movieBookedList.length==0){
+  return(
+    <VStack color="#ffffff" w="70%" bg="#000000" border="1px solid #black" borderRadius="8px" spacing="20px" px="10px" py="40px" margin="auto" >
+      <Text fontSize="4xl" my="15px">Oops...No Booking Yet!</Text>
+      <Button opacity={0.8}  color="red" bg="#242B2E" border="1px solid #cecece" onClick={()=>navigate("/")} >Book Latest Movies</Button>
+    </VStack>
+    )
+ }
   
   return (
       <VStack color="#ffffff" w="70%" bg="#000000" border="1px solid #black" spacing="20px" px="10px" py="40px" margin="auto" >
@@ -66,7 +88,7 @@ const Bookings = () => {
               </VStack>
              </HStack>
            </Link>
-           <DeleteModal confirmDelete={confirmDelete} handleDelete={handleDelete} movie_id={ele.movie_id} />
+           <DeleteModal confirmDelete={confirmDelete} handleDelete={handleDelete} movie_id={ele.id} />
            </HStack>
         })
        }
